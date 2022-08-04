@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class InspectionApiService {
-  readonly inspectionAPIUrl = 'https://localhost:7055/api';
+  readonly inspectionAPIUrl = 'https://localhost:7283/api';
 
   constructor(private http: HttpClient) {}
 
@@ -28,7 +28,7 @@ export class InspectionApiService {
   }
 
   //Inspection Type
-  getInspectionTypeList(): Observable<any[]> {
+  getInspectionTypesList(): Observable<any[]> {
     return this.http.get<any>(this.inspectionAPIUrl + '/InspectionTypes');
   }
 
